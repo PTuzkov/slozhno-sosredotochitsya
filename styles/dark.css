@@ -8,7 +8,7 @@
         --text-color: #f1b2ce; /* Цвет текста */
         --title-decor-color: #000028; /* Декоративный цвет заголовков */
         --title-color: #ff0070; /* Цвет заголовков */
-        --header__rec-visibility: visible; /* Показать лампочку */
+        --header-rec-visibility: flex; /* Показать rec */
     }
 
     .page {
@@ -25,7 +25,6 @@
     --text-color: #f1b2ce;
     --title-decor-color: #000028;
     --title-color: #ff0070;
-    --header__rec-visibility: visible;
-
+    --header-rec-visibility: flex;
     background-image: url(../images/cover-image-dark.png);
 }
