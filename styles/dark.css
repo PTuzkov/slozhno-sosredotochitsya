@@ -1,22 +1,22 @@
 @media (prefers-color-scheme: dark) {
-    :root {
-        --background-color: #000028; /* Основной фон */
-        --accent-color: #ff0070; /* Акцентный цвет */
-        --heading-color: #db00ff; /* Цвет заголовков */
-        --hover-border-color: rgba(255, 0, 112, 0.4); /* Цвет границы при наведении */
-        --menu-color: #ff0070; /* Цвет меню */
-        --text-color: #f1b2ce; /* Цвет текста */
-        --title-decor-color: #000028; /* Декоративный цвет заголовков */
-        --title-color: #ff0070; /* Цвет заголовков */
-        --header-rec-visibility: flex; /* Показать rec */
-    }
-
     .page {
         background-image: url(../images/cover-image-dark.png);
+        /* Используем одни и те же переменные */
+        --background-color: #000028;
+        --accent-color: #ff0070;
+        --heading-color: #db00ff;
+        --hover-border-color: rgba(255, 0, 112, 0.4);
+        --menu-color: #ff0070;
+        --text-color: #f1b2ce;
+        --title-decor-color: #000028;
+        --title-color: #ff0070;
+        --header-rec-visibility: flex;
     }
 }
 
+/* Тёмная тема вручную через класс */
 .page.theme_dark {
+    background-image: url(../images/cover-image-dark.png);
     --background-color: #000028;
     --accent-color: #ff0070;
     --heading-color: #db00ff;
@@ -26,5 +26,4 @@
     --title-decor-color: #000028;
     --title-color: #ff0070;
     --header-rec-visibility: flex;
-    background-image: url(../images/cover-image-dark.png);
 }
