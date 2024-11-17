@@ -1,5 +1,4 @@
 .page.theme_light {
-
     /* === Цветовая палитра для светлой темы === */
     --background-color: #fff1f7; /* Основной фон */
     --accent-color: #ff8dcb; /* Акцентный цвет */
@@ -11,4 +10,8 @@
     --title-color: #353430; /* Цвет заголовков */
     --header__rec-visibility: hidden; /* Скрытие rec */
     background-image: url(../images/cover-image-light.png);
+}
+
+.page.theme_light .header__rec {
+    display: none;
 }

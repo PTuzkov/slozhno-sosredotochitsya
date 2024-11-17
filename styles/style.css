@@ -197,6 +197,13 @@
     block-size: max(100vb, 668px);
 }
 
+.footer .decorations {
+    align-self: center;
+    justify-self: center;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px var(--accent-color);
+}
+
 .footer::before {
     display: block;
     content: '';
@@ -214,13 +221,6 @@
     inline-size: 25px;
     border-inline-start: 1px solid var(--menu-color);
     border-block-end: 1px solid var(--menu-color);
-}
-
-.footer .decorations {
-    align-self: center;
-    justify-self: center;
-    font-weight: 700;
-    text-shadow: 2px 2px 0px var(--accent-color);
 }
 
 /* media */

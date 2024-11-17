@@ -1,7 +1,5 @@
 @media (prefers-color-scheme: dark) {
-    .page {
-        background-image: url(../images/cover-image-dark.png);
-        /* Используем одни и те же переменные */
+    :root {
         --background-color: #000028;
         --accent-color: #ff0070;
         --heading-color: #db00ff;
@@ -12,11 +10,12 @@
         --title-color: #ff0070;
         --header-rec-visibility: flex;
     }
+    .page {
+        background-image: url(../images/cover-image-dark.png);
+    }
 }
 
-/* Тёмная тема вручную через класс */
 .page.theme_dark {
-    background-image: url(../images/cover-image-dark.png);
     --background-color: #000028;
     --accent-color: #ff0070;
     --heading-color: #db00ff;
@@ -25,5 +24,7 @@
     --text-color: #f1b2ce;
     --title-decor-color: #000028;
     --title-color: #ff0070;
+    background-image: url(../images/cover-image-dark.png);
     --header-rec-visibility: flex;
 }
+
