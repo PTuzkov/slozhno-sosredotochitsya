@@ -55,7 +55,7 @@
 .header::before,
 .footer::before,
 .header::after,
-.footer::after{
+.footer::after {
     display: block;
     content: '';
     block-size: 25px;
@@ -68,7 +68,7 @@
 }
 
 .header::before,
-.footer::before{
+.footer::before {
     border-inline-end: 1px solid var(--menu-color, #353430);
     border-block-start: 1px solid var(--menu-color, #353430);
     inset-inline-end: var(--general-padding, 10px);
