@@ -50,28 +50,41 @@
     inline-size: 9px;
 }
 
-.header::before {
+/* сущность для углов */
+
+.header::before,
+.footer::before,
+.header::after,
+.footer::after{
     display: block;
     content: '';
-    position: absolute;
-    border-inline-end: 1px solid var(--menu-color, #353430);
-    border-block-start: 1px solid var(--menu-color, #353430);
     block-size: 25px;
     inline-size: 25px;
+}
+
+.header::before,
+.header::after {
+    position: absolute;
+}
+
+.header::before,
+.footer::before{
+    border-inline-end: 1px solid var(--menu-color, #353430);
+    border-block-start: 1px solid var(--menu-color, #353430);
     inset-inline-end: var(--general-padding, 10px);
     inset-block-start: var(--general-padding, 10px);
 }
 
-.header::after {
-    display: block;
-    content: '';
-    position: absolute;
+.header::after,
+.footer::after {
     border-inline-start: 1px solid var(--menu-color, #353430);
     border-block-end: 1px solid var(--menu-color, #353430);
-    block-size: 25px;
-    inline-size: 25px;
     inset-inline-start: var(--general-padding, 10px);
     inset-block-end: var(--general-padding, 10px);
+}
+
+.footer::before {
+    justify-self: end;
 }
 
 /* theme menu */
@@ -202,25 +215,6 @@
     justify-self: center;
     font-weight: 700;
     text-shadow: 2px 2px 0px var(--accent-color);
-}
-
-.footer::before {
-    display: block;
-    content: '';
-    justify-self: end;
-    block-size: 25px;
-    inline-size: 25px;
-    border-inline-end: 1px solid var(--menu-color);
-    border-block-start: 1px solid var(--menu-color);
-}
-
-.footer::after {
-    display: block;
-    content: '';
-    block-size: 25px;
-    inline-size: 25px;
-    border-inline-start: 1px solid var(--menu-color);
-    border-block-end: 1px solid var(--menu-color);
 }
 
 /* media */
