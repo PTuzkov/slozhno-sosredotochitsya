@@ -50,41 +50,33 @@
     inline-size: 9px;
 }
 
+.header::before,
+.header::after {
+    position: absolute;
+}
+
 /* сущность для углов */
 
-.header::before,
-.footer::before,
-.header::after,
-.footer::after {
+.decorated-zone::before {
+    border-inline-end: 1px solid var(--menu-color, #353430);
+    border-block-start: 1px solid var(--menu-color, #353430);
+    inset-inline-end: var(--general-padding, 10px);
+    inset-block-start: var(--general-padding, 10px);
     display: block;
     content: '';
     block-size: 25px;
     inline-size: 25px;
 }
 
-.header::before,
-.header::after {
-    position: absolute;
-}
-
-.header::before,
-.footer::before {
-    border-inline-end: 1px solid var(--menu-color, #353430);
-    border-block-start: 1px solid var(--menu-color, #353430);
-    inset-inline-end: var(--general-padding, 10px);
-    inset-block-start: var(--general-padding, 10px);
-}
-
-.header::after,
-.footer::after {
+.decorated-zone::after {
     border-inline-start: 1px solid var(--menu-color, #353430);
     border-block-end: 1px solid var(--menu-color, #353430);
     inset-inline-start: var(--general-padding, 10px);
     inset-block-end: var(--general-padding, 10px);
-}
-
-.footer::before {
-    justify-self: end;
+    display: block;
+    content: '';
+    block-size: 25px;
+    inline-size: 25px;
 }
 
 /* theme menu */
@@ -150,6 +142,10 @@
     color: var(--title-color, #353430);
 }
 
+.main__section-title_full_width {
+    grid-column: 1 / -1;
+}
+
 .main__section-content {
     display: flex;
     flex-direction: column;
@@ -208,6 +204,10 @@
     grid-template-rows: auto 1fr auto;
     padding: var(--general-padding, 10px);
     block-size: max(100vb, 668px);
+}
+
+.footer::before {
+    justify-self: end;
 }
 
 .footer .decorations {
@@ -326,7 +326,6 @@
 
     .factors .main__section-content {
         grid-column: span 1;
-        grid-row: 2/3;
     }
 
     .main__section.gallery {
